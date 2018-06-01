@@ -8,7 +8,7 @@ int main() {
 
     Sun S(40, 12, 'S');
     // Distance between Sun and Earth is 10
-    Earth E(10, 'E', &S);
+    Earth P(10, 'P', &S);
     // Distance between Earth and Moon is 3
     Moon M(3, 'M', &E);
 
@@ -18,7 +18,7 @@ int main() {
         if (angle == 360)
             angle = 0;
 
-        E.Revolve(angle);
+        P.Revolve(angle);
         // Let the Moon circle around Earth 5 times faster
         M.Revolve(angle * 5);
         sleep(sleep_duration);
